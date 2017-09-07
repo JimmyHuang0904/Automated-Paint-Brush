@@ -1,0 +1,12 @@
+zero1 = [1 0.1786];
+numerator = zero1*151.1;
+pole1 = [1 125];
+pole2 = [1 0.03705];
+pole3 = [1 62.5];
+kd=1;
+kp=kd/65.54;
+ki=kd/2.316;
+zero23 = [1 kp ki];
+numerator = numerator*zero23;
+denominator = [1 0]*pole1*pole2*pole3;
+plot = tfs(numerator, denominator);
